@@ -1,0 +1,59 @@
+#annotations
+#	-> InjectArgs
+#	-> InjectType
+
+#collection
+#	-> interface Register
+#		-> EmergencyRegister implements Register
+
+#commands
+#	-> interface Executable
+#		-> abstract class BaseCommand implements Executable
+#			->  class EmergencyReportCommand extends BaseCommand
+#				class ProcessEmergenciesCommand extends BaseCommand
+#				class RegisterFireServiceCenterCommand extends BaseCommand
+#				class RegisterHealthEmergencyCommand extends BaseCommand
+#				class RegisterMedicalServiceCenterCommand extends BaseCommand
+#				class RegisterOrderEmergencyCommand extends BaseCommand
+#				class RegisterPoliceServiceCenterCommand extends BaseCommand
+#				class RegisterPropertyEmergencyCommand extends BaseCommand
+
+#core
+#	-> interface ManagementSystem
+#		-> class EmergencyManagementSystem implements ManagementSystem
+#engines
+#	-> class Engine implements Runnable 
+
+#enums
+#	-> enum EmergencyLevel
+#	-> enum Status
+	
+#interpreters
+#	-> interface Interpreter
+#		-> class CommandInterpreter implements Interpreter
+
+#io
+#	-> interface Reader
+#		-> class ConsoleReader implements Reader
+#	-> interface Writer
+#		-> class ConsoleWriter implements Writer
+
+#models
+#	-> centers
+#		-> interface EmergencyCenter
+#			-> abstract class BaseEmergencyCenter implements Emergency
+#				-> class FiremanServiceCenter extends BaseEmergencyCenter
+#				-> class MedicalServiceCenter extends BaseEmergencyCenter
+#				-> class PoliceServiceCenter extends BaseEmergencyCenter
+#				
+#	-> emergencies
+#		-> interface Emergency
+#			-> abstract class BaseEmergency implements Emergency
+#				-> class HealthEmergency extends BaseEmergency
+#				-> class OrderEmergency extends BaseEmergency
+#				-> class PropertyEmergency extends BaseEmergency
+    
+
+#utils
+#	-> interface RegistrationTime
+#		-> class RegistrationTimeImpl implements RegistrationTime
